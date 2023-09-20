@@ -1,0 +1,40 @@
+def roman(n):
+    msg = ""
+    while (n != 0):
+        if(n >= 900 and n <= 999):
+            msg += "CM"
+            n -= 900
+        elif(n >= 500 and n <= 899):
+            msg += "D"
+            n -= 500
+        elif(n >= 400 and n <= 499):
+            msg += "CD"
+            n -= 400
+        elif(n >= 100 and n <= 399):
+            msg += "C"
+            n -= 100
+        elif(n >= 90 and n <= 99):
+            msg += "XC"
+            n -= 90
+        elif(n >= 50 and n <= 89):
+            msg += "L"
+            n -= 50
+        elif(n >= 40 and n <= 49):
+            msg += "XL"
+            n -= 40
+        elif(n >= 10 and n <= 39):
+            msg += "X"
+            n -= 10
+        elif(n == 9):
+            msg += "IX"
+            n -= 9
+        elif(n >= 5 and n <= 8):
+            msg += "V"
+            n -= 5
+        elif(n == 4):
+            msg += "IV"
+            n -= 4
+        elif(n >= 1 and n <= 3):
+            msg += "I"
+            n -= 1
+    return(msg)
